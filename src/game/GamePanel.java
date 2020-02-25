@@ -28,8 +28,8 @@ public class GamePanel extends JPanel implements GameEngine {
     JLabel tscore2;
 
 
-    GamePlayer player1 = new AIPlayerRealtimeKiller(1,6,true);
-    GamePlayer player2 = new AIPlayerDynamic(2,6);
+    GamePlayer player1 = new AIPlayerDynamic(1,2);
+    GamePlayer player2 = new  AIPlayerDynamic(2,2);
 
     Timer player1HandlerTimer;
     Timer player2HandlerTimer;
@@ -105,6 +105,10 @@ public class GamePanel extends JPanel implements GameEngine {
         });
 
         manageTurn();
+    }
+
+    public void startGame(){
+        
     }
 
     private boolean awaitForClick = false;
